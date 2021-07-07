@@ -1,4 +1,5 @@
 import Meta from '@components/page/Meta';
+import Footer from '@components/page/Footer';
 
 import { server } from '@util/index';
 
@@ -7,6 +8,9 @@ import {
   Text,
   TextContent,
   Brand,
+  Nav,
+  NavItem,
+  NavList,
   Page,
   PageHeader,
   PageHeaderTools,
@@ -15,6 +19,7 @@ import {
 } from '@patternfly/react-core';
 
 import devfileLogo from '../../public/images/devfileLogo.svg';
+import githubLogo from '../../public/images/githubLogo.png';
 
 export interface LayoutProps {
   children: React.ReactNode;
@@ -30,25 +35,52 @@ const Layout: React.FC<LayoutProps> = ({ children }: LayoutProps) => {
     href: server,
   };
 
+  const nav = (
+    <Nav variant="horizontal">
+      <NavList>
+        <NavItem>
+          <a href="/starting">
+            Getting Started
+          </a>
+        </NavItem>
+        <NavItem>
+          <a target='_blank' href="https://docs.devfile.io">
+            Docs
+          </a>
+        </NavItem>
+        <NavItem>
+          <a target='_blank' href="#registry">
+            Devfile Registry
+          </a>
+        </NavItem>
+      </NavList>
+    </Nav>
+  );
+
   const Header = (
     <PageHeader
       logo={
-        <Brand
-          src={devfileLogo}
-          alt="Devfile Registry Logo"
-          className="h-full"
-        />
+        <Link href="/">
+          <a data-test-id="go-home-button">
+            <Brand
+              src={devfileLogo}
+              alt="Devfile Logo"
+              style={{height: '3rem'}}
+            />
+          </a>
+        </Link>
       }
       logoProps={logoProps}
+      topNav={nav}
       headerTools={
         <PageHeaderTools>
-          <Link href="/">
-            <a data-test-id="go-home-button">
-              <TextContent>
-                <Text>Devfile Registry</Text>
-              </TextContent>
-            </a>
-          </Link>
+          <a target='_blank' href="https://github.com/devfile">
+            <Brand
+              src={githubLogo}
+              alt="GitHub Logo"
+              style={{height: '3rem'}}
+            />
+          </a>
         </PageHeaderTools>
       }
     />
@@ -57,9 +89,8 @@ const Layout: React.FC<LayoutProps> = ({ children }: LayoutProps) => {
   return (
     <Page header={Header}>
       <Meta />
-      <PageSection variant={PageSectionVariants.light}>
-        <main>{children}</main>
-      </PageSection>
+      <main>{children}</main>
+      <Footer />
     </Page>
   );
 };

@@ -1,6 +1,6 @@
 {
-  "name": "registry-viewer",
-  "author": "Paul Schultz & Nadia Waid",
+  "name": "devfile-landing-page",
+  "author": "Braden Wilson",
   "version": "1.0.0",
   "scripts": {
     "dev": "next",

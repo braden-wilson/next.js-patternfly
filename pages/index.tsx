@@ -1,11 +1,45 @@
 import { InferGetStaticPropsType, GetStaticProps } from 'next';
+import {
+  Stack,
+  StackItem,
+  Grid,
+  GridItem
+} from '@patternfly/react-core';
+
+import LeadBanner1 from '@components/index/LeadBanner1'
+import LeadBanner2 from '@components/index/LeadBanner2'
+import WhyDevfiles from '@components/index/WhyDevfiles'
+import KeyFeatures from '@components/index/KeyFeatures'
 
 /**
  * Renders the {@link HomePage}
  */
+
 const HomePage: React.FC<InferGetStaticPropsType<GetStaticProps>> = () => (
   <div>
-    <h1>Hello World</h1>
+    <Stack>
+      <StackItem style={{
+          backgroundColor: 'var(--pf-global--BackgroundColor--dark-100)',
+          color: 'var(--pf-global--Color--light-200)',
+          padding: '7rem'
+        }}>
+        {LeadBanner2}
+      </StackItem>
+      <StackItem isFilled style={{
+          backgroundColor: 'var(--pf-global--BackgroundColor--100)',
+          color: 'var(--pf-global--Color--100)',
+          padding: '3rem'
+        }}>
+        {WhyDevfiles}
+      </StackItem>
+      <StackItem style={{
+          backgroundColor: 'var(--pf-global--BackgroundColor--200)',
+          color: 'var(--pf-global--Color--100)',
+          padding: '3rem'
+        }}>
+        {KeyFeatures}
+      </StackItem>
+    </Stack>
   </div>
 );
 

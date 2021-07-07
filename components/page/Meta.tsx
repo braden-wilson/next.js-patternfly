@@ -35,9 +35,9 @@ const Meta: React.FC<MetaProps> = ({
 );
 
 Meta.defaultProps = {
-  title: 'Devfile Registry',
-  keywords: 'Devfile, Registry, OpenShift, Kubernetes',
-  description: 'UI for the Devfile Registry',
+  title: 'Devfiles',
+  keywords: 'Devfile, OpenShift, Kubernetes',
+  description: 'Devfile Landing Page',
 };
 
 export default Meta;
