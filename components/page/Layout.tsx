@@ -14,7 +14,7 @@ import {
   PageSectionVariants,
 } from '@patternfly/react-core';
 
-import devfileLogo from '../../public/images/mainPageLogo.svg';
+import devfileLogo from '../../public/images/devfileLogo.svg';
 
 export interface LayoutProps {
   children: React.ReactNode;
