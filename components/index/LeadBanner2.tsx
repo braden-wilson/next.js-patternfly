@@ -10,14 +10,13 @@ import {
 const LeadBanner2 = (
     <Grid hasGutter>
       <GridItem span={2}></GridItem>
-      <GridItem span={1}>
+      <GridItem span={2}>
         <Brand
           src={devfileLogo}
           alt="Devfile Logo"
-          style={{height: '10rem'}}
+          style={{height: '13rem'}}
         />
       </GridItem>
-      <GridItem span={1}></GridItem>
       <GridItem span={5}>
         <ul>
           <li style={{fontSize: '3rem'}}>
