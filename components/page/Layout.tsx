@@ -5,8 +5,6 @@ import { server } from '@util/index';
 
 import Link from 'next/link';
 import {
-  Text,
-  TextContent,
   Brand,
   Nav,
   NavItem,
@@ -14,9 +12,9 @@ import {
   Page,
   PageHeader,
   PageHeaderTools,
-  PageSection,
-  PageSectionVariants,
 } from '@patternfly/react-core';
+
+import NavDropdown from '@components/page/NavDropdown'
 
 import devfileLogo from '../../public/images/devfileLogo.svg';
 import githubLogo from '../../public/images/githubLogo.png';
@@ -39,9 +37,8 @@ const Layout: React.FC<LayoutProps> = ({ children }: LayoutProps) => {
     <Nav variant="horizontal">
       <NavList>
         <NavItem>
-          <a href="/starting">
-            Getting Started
-          </a>
+          {/* <NavDropdown /> */}
+          <a href="/starting">Getting Started</a>
         </NavItem>
         <NavItem>
           <a target='_blank' href="https://docs.devfile.io">

@@ -6,6 +6,7 @@ import {
 } from '@patternfly/react-core';
 
 import NavExpandableList from '@components/starting/SideNavigation';
+import StartingNavList from '@components/starting/StartingNavList';
 
 /**
  * Renders the {@link HomePage}
