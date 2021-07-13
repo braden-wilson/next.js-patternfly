@@ -14,8 +14,6 @@ import {
   PageHeaderTools,
 } from '@patternfly/react-core';
 
-import NavDropdown from '@components/page/NavDropdown'
-
 import devfileLogo from '../../public/images/devfileLogo.svg';
 import githubLogo from '../../public/images/githubLogo.png';
 
@@ -37,16 +35,15 @@ const Layout: React.FC<LayoutProps> = ({ children }: LayoutProps) => {
     <Nav variant="horizontal">
       <NavList>
         <NavItem>
-          {/* <NavDropdown /> */}
           <a href="/starting">Getting Started</a>
         </NavItem>
         <NavItem>
-          <a target='_blank' href="https://docs.devfile.io">
+          <a target="_blank" rel="noreferrer" href="https://docs.devfile.io">
             Docs
           </a>
         </NavItem>
         <NavItem>
-          <a target='_blank' href="#registry">
+          <a target="_blank" rel="noreferrer" href="#registry">
             Devfile Registry
           </a>
         </NavItem>
@@ -62,7 +59,7 @@ const Layout: React.FC<LayoutProps> = ({ children }: LayoutProps) => {
             <Brand
               src={devfileLogo}
               alt="Devfile Logo"
-              style={{height: '3rem'}}
+              style={{ height: '3rem' }}
             />
           </a>
         </Link>
@@ -71,11 +68,11 @@ const Layout: React.FC<LayoutProps> = ({ children }: LayoutProps) => {
       topNav={nav}
       headerTools={
         <PageHeaderTools>
-          <a target='_blank' href="https://github.com/devfile">
+          <a target="_blank" rel="noreferrer" href="https://github.com/devfile">
             <Brand
               src={githubLogo}
               alt="GitHub Logo"
-              style={{height: '3rem'}}
+              style={{ height: '3rem' }}
             />
           </a>
         </PageHeaderTools>
